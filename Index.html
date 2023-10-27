@@ -186,17 +186,14 @@
         const result = deleteVowelsFromSentence(sentence);
         document.getElementById('vowelsResult').innerHTML = 'Result: ' + result;
     }
-
     function deleteVowelsFromSentence(sentence) {
         return sentence.replace(/[aeiouAEIOU]/g, '');
     }
-
     function countSuccessiveVowels() {
         const text = document.getElementById('text').value;
         const count = countSuccessiveVowelsInText(text);
         document.getElementById('successiveVowelsResult').innerHTML = 'Count of successive vowels: ' + count;
     }
-
     function countSuccessiveVowelsInText(text) {
         let count = 0;
         for (let i = 0; i < text.length - 1; i++) {
@@ -210,7 +207,6 @@
     function isVowel(char) {
         return /[aeiouAEIOU]/.test(char);
     }
-
     function convertDistance() {
         const distanceInKm = parseFloat(document.getElementById('distanceInKm').value);
         const result = convertDistanceUnits(distanceInKm);
@@ -223,13 +219,11 @@
         const centimeters = distanceInKm * 100000;
         return { meters, feet, inches, centimeters };
     }
-
     function calculateOvertimePay() {
         const hoursWorked = parseFloat(document.getElementById('hoursWorked').value);
         const overtimePay = calculateOvertime(hoursWorked);
         document.getElementById('overtimeResult').innerHTML = 'Overtime pay: Rs. ' + overtimePay;
     }
-
     function calculateOvertime(hoursWorked) {
         const regularHours = 40;
         const hourlyRate = 12.00;
